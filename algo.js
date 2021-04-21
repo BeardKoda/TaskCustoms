@@ -19,7 +19,7 @@ async function processAlgoByLine() {
 
     for await (const line of rl) {
         if(line.length==0){
-            groups[groupId] = removeDuplicateCharacters(groups[groupId]);
+            
             groupId++;
         }
         if(line.length > 0){
@@ -28,6 +28,7 @@ async function processAlgoByLine() {
             } else {
                 groups[groupId] = line;
             }
+            groups[groupId] = removeDuplicateCharacters(groups[groupId]);
         }
     }
 
